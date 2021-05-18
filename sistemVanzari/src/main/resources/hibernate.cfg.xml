@@ -1,0 +1,37 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">007danutz007</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/vanzari</property>
+
+
+
+        <property name="connection_pool_size">1</property>
+
+		<property name="hbm2ddl.auto">update</property>
+
+        <property name="show_sql">true</property>
+
+		<property name="hibernate.current_session_context_class">Thread</property>
+
+       <mapping class="PSI.sistemVanzari.entities.Produs"/>
+       <mapping class="PSI.sistemVanzari.entities.Client"/>
+       <mapping class="PSI.sistemVanzari.entities.Gestiune"/>
+       <mapping class="PSI.sistemVanzari.entities.CerereOferta"/>
+       <mapping class="PSI.sistemVanzari.entities.Comanda"/>
+       <mapping class="PSI.sistemVanzari.entities.Contract"/>
+       <mapping class="PSI.sistemVanzari.entities.DocInsotitor"/>
+       <mapping class="PSI.sistemVanzari.entities.Document"/>
+       <mapping class="PSI.sistemVanzari.entities.LinieDocument"/>
+       <mapping class="PSI.sistemVanzari.entities.Oferta"/>
+       <mapping class="PSI.sistemVanzari.entities.Receptie"/>
+        <mapping class="PSI.sistemVanzari.entities.DocRetur"/>
+
+    </session-factory>
+</hibernate-configuration>
